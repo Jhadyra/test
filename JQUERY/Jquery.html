@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(
+        function(){
+            $("#add-class").click(
+                function(){
+                    $("#p-add-class").addClass("red");
+                }
+            );
+
+
+            $("#slidetoggle").click(
+                function(){
+                    $("#catToggle").slideToggle();
+                }
+            );
+
+
+            $("#btn").click(function(){
+                    $(".new-parrafo").append("<p>Nuevo parrafo</p>");
+                });
+        }
+    )
+</script>
+<style>
+    .red{
+        color: red;
+    }
+
+    .hidden{
+        display: none;
+
+    }
+    .ejemplo p {
+        display: inline-block;
+        width: 400px;
+        padding-left: 40px;
+    }
+
+    h2{
+        text-align: center;
+        width: 500px;
+    }
+
+    img{
+        width: 100px;
+    }
+</style>
+
+</head>
+<body>
+
+    <h2>AddClass</h2>
+    <div class=" ejemplo">
+        <button id="add-class">AddClass</button>
+        <p id="p-add-class">Click the button to add class 'red' to this paragraph</p>
+    </div>
+    <hr>
+    
+    <h2>Slidetogle</h2>
+    <div class=" ejemplo new-parrafo">
+        <button id="slidetoggle">Slidetoggle</button>
+        <p>Click the button to slidetoggle this image</p>
+        <img id="catToggle" src="https://thumbs.gfycat.com/RapidCircularAmericanwirehair-size_restricted.gif" 
+        class="hidden">    
+    </div>
+    <hr>
+
+
+    <h2>Append</h2>
+    <div class="ejemplo new-parrafo">
+        <button id="btn"> Append</button>
+        <p>Click the button to append a new paragraph</p>
+    </div>
+    <hr>
+    
+
+
+</body>
+</html>
